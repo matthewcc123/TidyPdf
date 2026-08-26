@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TidyPdf (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "TidyPdf (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

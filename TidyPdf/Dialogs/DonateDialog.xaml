@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentDialog
+    x:Class="TidyPdf.Dialogs.DonateDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:TidyPdf.Dialogs"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DefaultButton="Primary"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    PrimaryButtonText="Donate"
+    SecondaryButtonText="Maybe later"
+    Style="{StaticResource DefaultContentDialogStyle}"
+    mc:Ignorable="d">
+
+    <Grid Padding="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!--  Header  -->
+        <StackPanel
+            Grid.Row="0"
+            HorizontalAlignment="Center"
+            Spacing="12">
+
+            <Grid>
+                <StackPanel Spacing="4">
+                    <Border
+                        Width="72"
+                        Height="72"
+                        HorizontalAlignment="Center"
+                        CornerRadius="36">
+
+                        <Image Source="/Assets/MepLab.png" Stretch="UniformToFill" />
+                    </Border>
+
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        FontSize="14"
+                        FontWeight="SemiBold"
+                        Opacity="0.8"
+                        Text="MepLab" />
+                </StackPanel>
+
+            </Grid>
+
+            <!--  Message  -->
+            <Border
+                Margin="8,8,8,0"
+                Padding="20,18"
+                Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                BorderThickness="1"
+                CornerRadius="8">
+
+                <StackPanel Spacing="12">
+
+                    <TextBlock
+                        FontSize="20"
+                        FontWeight="SemiBold"
+                        Text="Support Developer" />
+
+                    <TextBlock
+                        FontSize="14"
+                        LineHeight="21"
+                        Opacity="0.9"
+                        Text="TidyPdf is free to use, with no ads or subscriptions. If you find it useful, you can support its continued development with a small contribution."
+                        TextWrapping="Wrap" />
+
+                    <TextBlock
+                        Margin="0,4,0,0"
+                        FontSize="13"
+                        Opacity="0.7"
+                        Text="Thank you for supporting!"
+                        TextWrapping="Wrap" />
+
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+
+        <StackPanel
+            Grid.Row="1"
+            Margin="16,24,0,0"
+            Spacing="8">
+
+            <Border CornerRadius="6">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="36" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border
+                        Width="32"
+                        Height="32"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Background="{ThemeResource ControlFillColorDefaultBrush}"
+                        CornerRadius="16">
+
+                        <FontIcon
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontFamily="Segoe Fluent Icons"
+                            FontSize="16"
+                            Foreground="{ThemeResource AccentFillColorDefaultBrush}"
+                            Glyph="&#xE7E8;" />
+                    </Border>
+
+                    <TextBlock
+                        Grid.Column="1"
+                        Margin="12,0,0,0"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        Text="No ads" />
+                </Grid>
+            </Border>
+
+            <Border CornerRadius="6">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="36" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border
+                        Width="32"
+                        Height="32"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Background="{ThemeResource ControlFillColorDefaultBrush}"
+                        CornerRadius="16">
+
+                        <FontIcon
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontFamily="Segoe Fluent Icons"
+                            FontSize="16"
+                            Foreground="{ThemeResource AccentFillColorDefaultBrush}"
+                            Glyph="&#xE71D;" />
+                    </Border>
+
+                    <TextBlock
+                        Grid.Column="1"
+                        Margin="12,0,0,0"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        Text="No subscriptions" />
+                </Grid>
+            </Border>
+
+            <Border CornerRadius="6">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="36" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border
+                        Width="32"
+                        Height="32"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Background="{ThemeResource ControlFillColorDefaultBrush}"
+                        CornerRadius="16">
+
+                        <FontIcon
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontFamily="Segoe Fluent Icons"
+                            FontSize="16"
+                            Foreground="{ThemeResource AccentFillColorDefaultBrush}"
+                            Glyph="&#xE72E;" />
+                    </Border>
+
+                    <TextBlock
+                        Grid.Column="1"
+                        Margin="12,0,0,0"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        Text="Your personal data stays on your device"
+                        TextWrapping="Wrap" />
+                </Grid>
+            </Border>
+
+            <Border CornerRadius="6">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="36" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border
+                        Width="32"
+                        Height="32"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Background="{ThemeResource ControlFillColorDefaultBrush}"
+                        CornerRadius="16">
+
+                        <FontIcon
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontFamily="Segoe Fluent Icons"
+                            FontSize="16"
+                            Foreground="{ThemeResource AccentFillColorDefaultBrush}"
+                            Glyph="&#xE895;" />
+                    </Border>
+
+                    <TextBlock
+                        Grid.Column="1"
+                        Margin="12,0,0,0"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        Text="Free updates" />
+                </Grid>
+            </Border>
+
+        </StackPanel>
+
+
+    </Grid>
+
+</ContentDialog>
