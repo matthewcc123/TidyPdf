@@ -1,3 +1,4 @@
+using CommunityToolkit.WinUI.Helpers;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
@@ -28,6 +29,7 @@ namespace TidyPdf
     public sealed partial class MainWindow : Window
     {
         private WinuiTrayIcon.TrayIcon? systemTrayIcon;
+        private ThemeListener themeListener { get; set; } = new ThemeListener();
 
         private readonly ISettingService settingService = App.ServiceProvider.GetRequiredService<ISettingService>();
 
@@ -59,6 +61,12 @@ namespace TidyPdf
         {
             AppWindow.Changed += AppWindow_Changed;
             AppWindow.Closing += AppWindow_Closing;
+            ((FrameworkElement)Content).ActualThemeChanged += MainWindow_ActualThemeChanged;
+        }
+
+        private void MainWindow_ActualThemeChanged(FrameworkElement sender, object args)
+        {
+            ThemeHelper.UpdateTitleBar(sender.ActualTheme);
         }
 
         private void InitializeWindow()
@@ -230,6 +238,7 @@ namespace TidyPdf
         {
             AppWindow.Changed -= AppWindow_Changed;
             AppWindow.Closing -= AppWindow_Closing;
+            ((FrameworkElement)Content).ActualThemeChanged -= MainWindow_ActualThemeChanged;
 
             if (systemTrayIcon == null)
                 return;
