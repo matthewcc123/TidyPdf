@@ -11,8 +11,8 @@
   IgnorableNamespaces="uap rescap systemai">
 
   <Identity
-    Name="0b99398a-b7d7-4ee6-a235-f14139bde004"
-    Publisher="CN=MepLab"
+    Name="MepLab.TidyPdf"
+    Publisher="CN=513FBEF4-5B59-4F4E-8B61-857591D5BD48"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="0b99398a-b7d7-4ee6-a235-f14139bde004" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
@@ -42,7 +42,7 @@
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"  Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
 
