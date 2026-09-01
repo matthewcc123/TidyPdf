@@ -1,11 +1,11 @@
+import Icon from '../assets/icon_150.png';
 
-export default function Home() {
-
+export default function Privacy() {
 
   return (
 
     <div className="flex flex-col space-y-3 max-w-2xl mx-auto p-4 text-gray-800">
-      <img src="./assets/icon_150.png" className="w-12 h-12 self-center" />
+      <img src={Icon} className="w-12 h-12 self-center" />
       <h2 className="text-md font-semibold self-center text-gray-900">Privacy Policy</h2>
       <p className="text-xs text-gray-500 font-medium self-center mb-2">Effective date: August 26, 2026</p>
 

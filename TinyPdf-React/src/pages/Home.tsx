@@ -1,7 +1,8 @@
 import { CheckmarkRegular } from '@fluentui/react-icons';
 import ImageCarousel, { type CarouselImageData } from '../components/ImageCarousel';
-import ScreenshotData from '../data/Screenshots.json';
+import ScreenshotData from '../data/Screenshots.js';
 import StoreBadge from '../components/StoreBadge';
+import Icon from '../assets/icon_150.png';
 
 export default function Home() {
 
@@ -11,7 +12,7 @@ export default function Home() {
 
     <>
       <div className="flex flex-col justify-center items-center space-y-2">
-        <img src="./assets/icon_150.png" className="w-12 h-12" />
+        <img src={Icon} className="w-12 h-12" />
         <h1 >TinyPdf</h1>
         <p className="text-sm  text-center">
           TidyPdf is a simple and easy to use desktop application for organizing and managing your PDF files.
