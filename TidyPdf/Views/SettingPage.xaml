@@ -148,7 +148,20 @@
                                     </StackPanel>
                                 </StackPanel>
                             </controls:SettingsCard>
+                            <controls:SettingsCard HorizontalContentAlignment="Left" ContentAlignment="Left">
+                                <StackPanel>
+                                    <TextBlock Text="Links" />
+                                    <StackPanel Margin="-12,12,0,0" Spacing="8">
 
+                                        <HyperlinkButton Content="Source Code" NavigateUri="https://github.com/matthewcc123/tidypdf" />
+
+                                        <HyperlinkButton Content="Website" NavigateUri="https://matthewcc123.github.io/TidyPdf" />
+
+                                        <HyperlinkButton Content="Privacy Policy" NavigateUri="https://matthewcc123.github.io/TidyPdf/#/privacy" />
+
+                                    </StackPanel>
+                                </StackPanel>
+                            </controls:SettingsCard>
                         </controls:SettingsExpander.Items>
                     </controls:SettingsExpander>
 

@@ -24,9 +24,6 @@
     <None Remove="Dialogs\DonateDialog.xaml" />
     <None Remove="Views\SettingPage.xaml" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="E:\ProjectOCR\InvoiceCapture\InvoiceCapture.WinUI\Helpers\UI\ThemeHelper.cs" Link="Helpers\ThemeHelper.cs" />
-  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
