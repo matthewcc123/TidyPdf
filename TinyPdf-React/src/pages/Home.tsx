@@ -54,7 +54,7 @@ export default function Home() {
         <h2 className=" self-center">Privacy Policy</h2>
         <p className=" text-sm text-center">
           Please read our{' '}
-          <a href="/privacy" className="text-red-500 hover:underline">
+          <a href="./privacy" className="text-red-500 hover:underline">
             Privacy Policy
           </a>{' '}
           for more information.

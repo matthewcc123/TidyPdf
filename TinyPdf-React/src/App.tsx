@@ -12,7 +12,7 @@ function App() {
 
     <div className="p-9 min-h-screen min-w-full">
       <div className="layer p-9 max-w-200 w-full flex flex-col space-y-8 justify-self-center">
-        <BrowserRouter>
+        <BrowserRouter basename="/TidyPdf">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/privacy" element={<Privacy />} />
