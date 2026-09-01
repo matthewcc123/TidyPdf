@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    @apply text-gray-600;
+  }
+
+  h1 {
+    @apply text-black;
+    @apply font-medium;
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-black;
+    @apply font-medium;
+    @apply text-xl
+  }
+
+  a {
+    @apply text-red-500;
+    @apply hover:underline;
+  }
+
+  body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  z-index: -1; 
+  pointer-events: none; 
+  opacity: 0.25;
+}
+}
+
+@layer components {
+  .layer {
+    @apply bg-white/75;
+    @apply rounded-md;
+    @apply shadow-md;
+    @apply border;
+    @apply border-gray-300/50;
+  }
+}
