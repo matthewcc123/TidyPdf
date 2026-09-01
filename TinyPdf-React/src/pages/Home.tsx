@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <div className="flex flex-col justify-center items-center space-y-2">
         <img src={Icon} className="w-12 h-12" />
-        <h1 >TinyPdf</h1>
+        <h1 >TidyPdf</h1>
         <p className="text-sm  text-center">
           TidyPdf is a simple and easy to use desktop application for organizing and managing your PDF files.
         </p>
