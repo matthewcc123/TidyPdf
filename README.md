@@ -2,6 +2,8 @@
 
 TidyPdf is a simple and easy to use desktop application for organizing and managing your PDF files.
 
+<a href="https://apps.microsoft.com/store/detail/9P25MFF9VK1J"><img src="https://i.imgur.com/aAWYhvm.png" width="150px"/></a>
+
 ## Key Features
 
 - **Merge PDFs** – Combine multiple PDF files into a single document.
@@ -36,6 +38,3 @@ Built with **WinUI 3** and **.NET 10**.
 - **SkiaSharp** (4.151.1)
 - **WinuiTrayIcon** (26.4.15.56)
 
-### Download
-
-<a href="https://apps.microsoft.com/store/detail/9P25MFF9VK1J"><img src="https://i.imgur.com/aAWYhvm.png" width="150px"/></a>
