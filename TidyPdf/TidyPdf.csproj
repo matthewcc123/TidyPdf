@@ -13,7 +13,7 @@
     <EnableMsixTooling>true</EnableMsixTooling>
     <Nullable>enable</Nullable>
     <LangVersion>preview</LangVersion>
-    
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 
     <!--Unpackage-->
     <!--<WindowsPackageType>None</WindowsPackageType>
