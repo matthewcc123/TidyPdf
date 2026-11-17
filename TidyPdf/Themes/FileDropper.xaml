@@ -21,8 +21,6 @@
                         CornerRadius="{TemplateBinding CornerRadius}">
                         <Rectangle
                             Name="DashOutline"
-                            RadiusX="{Binding Path=CornerRadius.TopLeft, ElementName=DropZone}"
-                            RadiusY="{Binding Path=CornerRadius.TopRight, ElementName=DropZone}"
                             Stroke="{TemplateBinding BorderBrush}"
                             StrokeDashArray="8 4"
                             StrokeThickness="1"
@@ -31,17 +29,13 @@
                         <Rectangle
                             Name="DropOutline"
                             Opacity="0"
-                            RadiusX="{Binding Path=CornerRadius.TopLeft, ElementName=DropZone}"
-                            RadiusY="{Binding Path=CornerRadius.TopRight, ElementName=DropZone}"
                             Stroke="{ThemeResource AccentFillColorDefaultBrush}"
                             StrokeThickness="2" />
 
                         <Rectangle
                             Name="DropOverlay"
                             Fill="{ThemeResource AccentFillColorDefaultBrush}"
-                            Opacity="0"
-                            RadiusX="{Binding Path=CornerRadius.TopLeft, ElementName=DropZone}"
-                            RadiusY="{Binding Path=CornerRadius.TopRight, ElementName=DropZone}" />
+                            Opacity="0" />
 
                         <StackPanel
                             Margin="8"

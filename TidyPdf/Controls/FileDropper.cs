@@ -50,6 +50,9 @@ namespace TidyPdf.Controls
         private bool isPointerOver;
         private bool isPressed;
 
+        private Rectangle? dashOutline;
+        private Rectangle? dropOutline;
+        private Rectangle? dropOverlay;
 
         public FileDropper()
         {
@@ -57,7 +60,24 @@ namespace TidyPdf.Controls
 
             this.Unloaded += FileDropper_Unloaded;
             this.IsEnabledChanged += FileDropper_IsEnabledChanged;
+
+            RegisterPropertyChangedCallback(CornerRadiusProperty, (s, e) =>
+            {
+                UpdateOutline();
+            });
         }
+
+        protected override void OnApplyTemplate()
+        {
+            base.OnApplyTemplate();
+
+            dashOutline = GetTemplateChild("DashOutline") as Rectangle;
+            dropOutline = GetTemplateChild("DropOutline") as Rectangle;
+            dropOverlay = GetTemplateChild("DropOverlay") as Rectangle;
+
+            UpdateOutline();
+        }
+
         private void FileDropper_IsEnabledChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             isDragging = false;
@@ -98,6 +118,25 @@ namespace TidyPdf.Controls
             }
 
             VisualStateManager.GoToState(this, state, true);
+        }
+
+        private void UpdateOutline()
+        {
+            if (dashOutline != null)
+            {
+                dashOutline.RadiusX = CornerRadius.TopLeft;
+                dashOutline.RadiusY = CornerRadius.TopRight;
+            }
+            if (dropOutline != null)
+            {
+                dropOutline.RadiusX = CornerRadius.TopLeft;
+                dropOutline.RadiusY = CornerRadius.TopRight;
+            }
+            if (dropOverlay != null)
+            {
+                dropOverlay.RadiusX = CornerRadius.TopLeft;
+                dropOverlay.RadiusY = CornerRadius.TopRight;
+            }
         }
 
         protected override void OnLostFocus(RoutedEventArgs e)

@@ -263,7 +263,15 @@ namespace TidyPdf.ViewModels
             foreach (var page in pages)
             {
                 page.Clear();
-                Pages.Remove(page);
+
+                if (Pages.FirstOrDefault(p => p == page) != null)
+                {
+                    Pages.Remove(page);
+                }
+                else if (DeletedPages.FirstOrDefault(p => p == page) != null)
+                {
+                    DeletedPages.Remove(page);
+                }
             }
 
             Files.Remove(file);
