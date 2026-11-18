@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using TidyPdf.Models;
-using static TidyPdf.Helpers.ImageHelper;
+using TidyPdf.Serialization;
 
 namespace TidyPdf.Services
 {
@@ -34,7 +34,7 @@ namespace TidyPdf.Services
 
                 string json = await File.ReadAllTextAsync(settingFilePath);
 
-                Settings = JsonSerializer.Deserialize<AppSettings>(json) ?? new AppSettings();
+                Settings = JsonSerializer.Deserialize(json, AppJsonSerializerContext.Default.AppSettings) ?? new AppSettings();
 
                 return Settings;
             }
@@ -50,7 +50,7 @@ namespace TidyPdf.Services
 
             Directory.CreateDirectory(settingFileDirectory);
 
-            string json = JsonSerializer.Serialize<AppSettings>(Settings, new JsonSerializerOptions { WriteIndented = true });
+            string json = JsonSerializer.Serialize(Settings, AppJsonSerializerContext.Default.AppSettings);
 
             await File.WriteAllTextAsync(settingFilePath, json);
 
